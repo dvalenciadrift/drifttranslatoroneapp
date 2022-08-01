@@ -54,10 +54,6 @@ In order for the experience to function properly you will need to set up a devel
 This application leverages `ngrok` as it's means to listening and digesting events from Drift. It is being leveraged in a free capacity and therefore whenever the service restarts a new randomly generated URL will be exposed to recieve POST requests from Drift. This URL will need to be updated inside of the relevant Drift Dev Application in order to function properly after each restart -- as seen below: 
 
 ![Capture](https://user-images.githubusercontent.com/57994411/151228007-563fafb8-e7e2-438c-98a5-81537987e4e6.JPG)
-## Demo of Site Visitor Experience (German)
-![DRIFT-VIDEO-3045136-3149711-1643082412](https://user-images.githubusercontent.com/57994411/150907452-797a7a1c-af96-494c-ab3f-7843565143fa.gif)
+## Demo
 
-## Demo of Chat Agent Experience (German --> English & English --> German)
-
-![DRIFT-VIDEO-3047278-3151853-1643167646](https://user-images.githubusercontent.com/57994411/151099191-2b65e93a-e250-46e0-bf1a-876b76fc2dac.gif)
-
+[Watch Demo here](https://video.drift.com/v/abplTArfuQO/)
