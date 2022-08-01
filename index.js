@@ -44,7 +44,6 @@ app.post('/translate', async (req, res) => {
             let driftMessage = req.body.data.body
             let validateNote = driftMessage.search('/translate')
             if (driftAuthorType === 'user' && driftMessageType === 'private_note' && validateNote != -1) {
-                console.log('first if inside private note')
                 let driftAuthorId = req.body.data.author.id
                 let regex = /([/])\w+/g
                 let ModifiedDriftMessage = driftMessage.replace(regex, '')
@@ -53,7 +52,6 @@ app.post('/translate', async (req, res) => {
                 let driftConversationAgent = req.body.data.conversationId
                 console.log(`This is the value of driftConversationAgent: ${driftConversationAgent}`)
                 let translatedText = await translateText(ModifiedDriftMessage, detectedText)
-                console.log('before sendinfg translated message')
                 request.post(`${conversationApiBase}${driftConversationAgent}/messages`)
                     .set('Content-type', 'application/json')
                     .set('Authorization', `Bearer ${oneAppToken}`)
@@ -77,7 +75,6 @@ app.post('/translate', async (req, res) => {
             console.error(error)
         }
     } else if (req.body.data.type === 'chat' && req.body.data.author.type === 'contact') {
-        console.log('else if')
         try {
             let driftBot = req.body.data.author.bot
             let driftAuthorType = req.body.data.author.type
@@ -108,9 +105,7 @@ app.post('/translate', async (req, res) => {
                             error: err.message
                         }
                     })
-            } else {
-                console.log(`Did not process message as it was not a human writing directly into the chat`)
-            }
+            } 
         } catch (error) {
             console.error(error)
         }
