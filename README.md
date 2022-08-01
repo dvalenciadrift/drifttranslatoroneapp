@@ -56,4 +56,4 @@ This application leverages `ngrok` as it's means to listening and digesting even
 ![Capture](https://user-images.githubusercontent.com/57994411/151228007-563fafb8-e7e2-438c-98a5-81537987e4e6.JPG)
 ## Demo
 
-![Watch Demo here](https://video.drift.com/v/abplTArfuQO/)
+[Watch Demo here](https://video.drift.com/v/abplTArfuQO/)
